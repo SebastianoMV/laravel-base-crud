@@ -1,3 +1,16 @@
 //
 
 @import '~bootstrap/scss/bootstrap';
+
+.card{
+  width: 200px;
+  height: 350px;
+  img{
+    height: 75%;
+  }
+}
+
+.card-show{
+  width: 400px;
+  height: 600px;
+}
