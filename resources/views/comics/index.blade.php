@@ -2,7 +2,15 @@
 
 @section('content')
 
+  @if(session('fumetto_eliminato'))
+    <div class="alert alert-success container" role="alert">
+      {{ session('fumetto_eliminato')}}
+    </div> 
+  @endif
+  
+
   <div class="container d-flex flex-wrap justify-content-center">
+    
       @foreach($comics as $comic)
       <div class="card m-3 text-center">
         {{$comic->title}}

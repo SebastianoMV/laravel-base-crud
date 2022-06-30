@@ -98,9 +98,7 @@ class ComicController extends Controller
 
         $comic->update($data);
 
-        return redirect()->route('comics.index');
-
-        
+        return redirect()->route('comics.index', $comic);   
     }
 
     /**
@@ -113,7 +111,7 @@ class ComicController extends Controller
     {
         $comic->delete();
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('fumetto_eliminato', "Il fumetto $comic->title è stato eliminato");
 
 
     }
