@@ -15,11 +15,11 @@
   </div>
   <div class="form-group">
     <label for="image">Image</label>
-    <input type="text" {{ $comic->image }} class="form-control" name="image" id="image" placeholder="Image">
+    <input type="text" value="{{ $comic->image }}" class="form-control" name="image" id="image" placeholder="Image">
   </div>
   <div class="form-group">
     <label for="type">Type</label>
-    <input type="text" {{ $comic->type }} class="form-control" name="type" id="type" placeholder="Type">
+    <input type="text" value="{{ $comic->type }}" class="form-control" name="type" id="type" placeholder="Type">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

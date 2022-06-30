@@ -12,5 +12,15 @@
         </div>
       </div>
   </div>
+
+  <form action="{{ route('comics.destroy', $comic)}}" 
+        method="POST"
+        onsubmit="return confirm('Sicuro di vole eliminare?')">
+    @csrf
+
+    @method('DELETE')
+
+    <button type="submit">DELETE</button>
+  </form>
    
 @endsection
