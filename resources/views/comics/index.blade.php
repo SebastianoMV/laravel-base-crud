@@ -13,11 +13,25 @@
     
       @foreach($comics as $comic)
       <div class="card m-3 text-center">
-        {{$comic->title}}
-        <div class="d-flex flex-column justify-content-center">
+        <div class="title-card">
+          {{$comic->title}}
+        </div>
+        
+        <div class=" flex-column justify-content-center">
           <img src="{{$comic->image}}" alt="">
-          <a class="btn btn-primary" href="{{ route('comics.show', $comic)}}">Show</a>
-          <a class="btn btn-primary" href="{{ route('comics.edit', $comic)}}">Edit</a>
+          <a class="btn btn-primary m-1" href="{{ route('comics.show', $comic)}}">Show</a>
+          <a class="btn btn-primary m-1" href="{{ route('comics.edit', $comic)}}">Edit</a>
+          <form 
+                class="d-inline"
+                action="{{ route('comics.destroy', $comic)}}" 
+                method="POST"
+                onsubmit="return confirm('Sicuro di vole eliminare?')">
+          @csrf
+
+          @method('DELETE')
+
+          <button class="btn btn-warning" type="submit">DELETE</button>
+          </form>
         </div>
       </div>
       

@@ -12150,16 +12150,27 @@ fieldset:disabled .btn {
 }
 
 .card {
+  color: white;
+  background-color: rgb(35, 34, 34);
+  padding: 5px;
   width: 200px;
-  height: 400px;
+}
+
+.card .title-card {
+  height: 50px;
 }
 
 .card img {
-  height: 75%;
+  width: 100%;
 }
 
 .card-show {
-  width: 400px;
-  height: 600px;
+  width: 300px;
+}
+
+.card-form {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  background-color: rgb(233, 233, 233);
 }
 

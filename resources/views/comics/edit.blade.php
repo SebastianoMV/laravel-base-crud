@@ -2,8 +2,7 @@
 
 @section('content')
 
-
-<h2>{{$comic->name}}</h2>
+<div class="container card-form">
 
 <form action="{{ route('comics.update', $comic) }}" method="POST">
   @csrf
@@ -21,7 +20,10 @@
     <label for="type">Type</label>
     <input type="text" value="{{ $comic->type }}" class="form-control" name="type" id="type" placeholder="Type">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary my-1">Submit</button>
 </form>
+
+</div>
+
    
 @endsection
