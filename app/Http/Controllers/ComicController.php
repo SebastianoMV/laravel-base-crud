@@ -42,10 +42,16 @@ class ComicController extends Controller
         $data = $request->all();
 
         $new_comic = new Comic();
-        $new_comic->title = $data['title'];
-        $new_comic->image = $data['image'];
-        $new_comic->type = $data['type'];
+
+        $new_comic-> fill($data);
         $new_comic->slug = Str::slug($data['title'], '-');
+
+
+
+        // $new_comic->title = $data['title'];
+        // $new_comic->image = $data['image'];
+        // $new_comic->type = $data['type'];
+        // $new_comic->slug = Str::slug($data['title'], '-');
         
         $new_comic->save();
 

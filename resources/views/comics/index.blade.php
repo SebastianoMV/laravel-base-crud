@@ -16,7 +16,7 @@
         <div class="title-card">
           {{$comic->title}}
         </div>
-        
+        {{$comic->slug}}
         <div class=" flex-column justify-content-center">
           <img src="{{$comic->image}}" alt="">
           <a class="btn btn-primary m-1" href="{{ route('comics.show', $comic)}}">Show</a>
