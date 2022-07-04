@@ -22,21 +22,21 @@
     <div class="form-group">
       <label for="title">Title</label>
       <input type="text" 
-      value="{{old('title'),  $comic->title}}" class="form-control" name="title" id="title" placeholder="Enter title">
+      value="{{old('title',  $comic->title)}}" class="form-control" name="title" id="title" placeholder="Enter title">
       @error('title')
           <p class="error-msg">{{$message}}</p>
         @enderror
     </div>
     <div class="form-group">
       <label for="image">Image</label>
-      <input type="text" value="{{old('image'), $comic->image }}" class="form-control" name="image" id="image" placeholder="Image">
+      <input type="text" value="{{old('image', $comic->image)}}" class="form-control" name="image" id="image" placeholder="Image">
       @error('image')
           <p class="error-msg">{{$message}}</p>
         @enderror
     </div>
     <div class="form-group">
       <label for="type">Type</label>
-      <input type="text" value="{{old('type'), $comic->type }}" class="form-control" name="type" id="type" placeholder="Type">
+      <input type="text" value="{{old('type', $comic->type)}}" class="form-control" name="type" id="type" placeholder="Type">
       @error('type')
           <p class="error-msg">{{$message}}</p>
         @enderror
